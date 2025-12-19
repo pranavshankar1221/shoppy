@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import Snowfall from 'react-snowfall';
 
 export default function Login({ onLogin, switchToRegister }) {
   const [formData, setFormData] = useState({
@@ -106,6 +107,7 @@ export default function Login({ onLogin, switchToRegister }) {
 
   return (
     <div style={styles.container}>
+      <Snowfall snowflakeCount={100} />
       <div style={styles.card}>
         <h2 style={styles.title}>🛍️ Login to ShopEasy</h2>
         {error && <div style={styles.error}>{error}</div>}

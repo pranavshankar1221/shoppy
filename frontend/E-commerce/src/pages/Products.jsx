@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Snowfall from 'react-snowfall';
 
 export default function Products({ user, onLogout }) {
   const [products, setProducts] = useState([
@@ -394,6 +395,7 @@ export default function Products({ user, onLogout }) {
 
   return (
     <div style={styles.container}>
+      <Snowfall snowflakeCount={100} />
       {/* Navigation */}
       <nav style={styles.navbar}>
         <div style={styles.navContent}>
